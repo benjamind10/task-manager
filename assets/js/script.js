@@ -1,8 +1,16 @@
 // Global Variables
 var currentHour = moment().hours();
-
 var currentDate =
   moment().format('dddd') + ' ' + moment().format('Do MMM YYYY');
+
+// Function that makes an array with all the time blocks
+function makeArr() {
+  var arr = [];
+  arr = $('textarea').map((j, element) => {
+    return $(element);
+  });
+  console.log(arr);
+}
 
 // Function that displays the current time by the second on the main header
 setInterval(function () {
