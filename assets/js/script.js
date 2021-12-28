@@ -1,9 +1,10 @@
+// Global Variables
 var currentHour = moment().hours();
 
-// Shorthand for $( document ).ready()
 var currentDate =
   moment().format('dddd') + ' ' + moment().format('Do MMM YYYY');
 
+// Function that displays the current time by the second on the main header
 setInterval(function () {
   var currentTime = moment();
   $('#currentDay').html(
@@ -16,6 +17,7 @@ setInterval(function () {
   );
 }, 100);
 
+// Thia function sets the background accordingly to the time block
 function setBackground() {
   $('.form-control').each(function () {
     var timeBlock = parseInt($(this).attr('id'));
