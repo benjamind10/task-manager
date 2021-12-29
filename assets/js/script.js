@@ -9,7 +9,6 @@ function makeArr() {
   arr = $('textarea').map((j, element) => {
     return $(element);
   });
-  console.log(arr);
 }
 
 // Function that displays the current time by the second on the main header
@@ -40,6 +39,7 @@ function setBackground() {
   });
 }
 
+// This is the functiont hat runs at the beginning of the app
 $(function () {
   setBackground();
 });
