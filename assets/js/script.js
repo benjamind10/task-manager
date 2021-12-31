@@ -14,19 +14,19 @@ function makeArr() {
   return arr;
 }
 
+// This method will populate the time blocks with what is in local storage
 function startDay(arr) {
   arr.each(function (i) {
     arr[i] = JSON.parse(localStorage.getItem(i));
-    console.log(arr[i]);
+    this.val(arr[i]);
   });
 }
 
+// This function controls the button
 function saveBtn() {
   $('.saveBtn').on('click', function () {
     userInput = $(this).siblings('.form-control').val().trim();
-    console.log(userInput);
     indexId = $(this).attr('id');
-    console.log(indexId);
     localStorage.setItem(indexId, JSON.stringify(userInput));
   });
 }
@@ -61,6 +61,7 @@ function setBackground() {
 
 // This is the functiont hat runs at the beginning of the app
 $(function () {
+  startDay(makeArr());
   setBackground();
   saveBtn();
 });
