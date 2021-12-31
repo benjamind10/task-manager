@@ -16,6 +16,7 @@ function makeArr() {
 
 function startDay(arr) {
   arr.each(function (i) {
+    arr[i] = JSON.parse(localStorage.getItem(i));
     console.log(arr[i]);
   });
 }
