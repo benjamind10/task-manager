@@ -19,9 +19,7 @@ function startDay(arr) {
   arr.each(function (i) {
     arr[i] = JSON.parse(localStorage.getItem(i));
     this.val(arr[i]);
-    this.blur(function () {
-      this.style.color = 'black';
-    });
+    this.css('color', 'black');
   });
 }
 
@@ -62,9 +60,18 @@ function setBackground() {
   });
 }
 
-// This is the functiont hat runs at the beginning of the app
+// Function to clear the localstorage and have an empty page.
+function clearDay() {
+  $('#clearDay').on('click', function () {
+    localStorage.clear();
+    startDay(makeArr());
+  });
+}
+
+// This is the function hat runs at the beginning of the app
 $(function () {
   startDay(makeArr());
   setBackground();
   saveBtn();
+  clearDay();
 });
