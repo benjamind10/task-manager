@@ -1,3 +1,4 @@
+/* All CSS provided prior */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -67,7 +68,7 @@ textarea {
   font-size: 20px;
 }
 
+/* Modifed CSS for zoom effect */
 .saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  transform: scale(1.5);
 }

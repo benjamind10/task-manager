@@ -29,7 +29,7 @@ setInterval(function () {
 // Function that makes an array with all the time blocks
 function makeArr() {
   var arr = [];
-  arr = $('textarea').map((j, element) => {
+  arr = $('textarea').map((i, element) => {
     return $(element);
   });
   return arr;
@@ -44,11 +44,11 @@ function startDay(arr) {
   });
 }
 
-// This function controls the button
+// This function controls the button and saves the text to local storage
 function saveBtn() {
   $('.saveBtn').on('click', function () {
     userInput = $(this).siblings('.form-control').val().trim();
-    indexId = $(this).attr('id');
+    indexId = $(this).attr('data-id');
     localStorage.setItem(indexId, JSON.stringify(userInput));
   });
 }
