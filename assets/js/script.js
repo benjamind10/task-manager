@@ -5,6 +5,27 @@ var currentDate =
 var uInput;
 var indexId;
 
+// This is the function hat runs at the beginning of the app
+$(function () {
+  startDay(makeArr());
+  setBackground();
+  saveBtn();
+  clearDay();
+});
+
+// This block displays the current time by the second on the main header
+setInterval(function () {
+  var currentTime = moment();
+  $('#currentDay').html(
+    currentTime.format('YYYY MMMM DD') +
+      ' ' +
+      currentTime.format('dddd').substring(0, 3).toUpperCase()
+  );
+  $('#currentDay').html(
+    currentDate + ' ' + currentTime.format('hh:mm:ss A')
+  );
+}, 100);
+
 // Function that makes an array with all the time blocks
 function makeArr() {
   var arr = [];
@@ -32,19 +53,6 @@ function saveBtn() {
   });
 }
 
-// Function that displays the current time by the second on the main header
-setInterval(function () {
-  var currentTime = moment();
-  $('#currentDay').html(
-    currentTime.format('YYYY MMMM DD') +
-      ' ' +
-      currentTime.format('dddd').substring(0, 3).toUpperCase()
-  );
-  $('#currentDay').html(
-    currentDate + ' ' + currentTime.format('hh:mm:ss A')
-  );
-}, 100);
-
 // Thia function sets the background accordingly to the time block
 function setBackground() {
   $('.form-control').each(function () {
@@ -67,11 +75,3 @@ function clearDay() {
     startDay(makeArr());
   });
 }
-
-// This is the function hat runs at the beginning of the app
-$(function () {
-  startDay(makeArr());
-  setBackground();
-  saveBtn();
-  clearDay();
-});
