@@ -19,6 +19,9 @@ function startDay(arr) {
   arr.each(function (i) {
     arr[i] = JSON.parse(localStorage.getItem(i));
     this.val(arr[i]);
+    this.blur(function () {
+      this.style.color = 'black';
+    });
   });
 }
 
