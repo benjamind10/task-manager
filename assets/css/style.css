@@ -71,4 +71,5 @@ textarea {
 /* Modifed CSS for zoom effect */
 .saveBtn i:hover {
   transform: scale(1.5);
+  color: black;
 }
