@@ -4,15 +4,15 @@ This is a taskamanger tool that was created to keep track of the work day hours.
 
 # Built With:
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 
 # Frameworks:
 
--JQuery
--Bootstrap
--Moment.js
+- JQuery
+- Bootstrap
+- Moment.js
 
 # Getting Started:
 
