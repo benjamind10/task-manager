@@ -53,11 +53,12 @@ function saveBtn() {
   });
 }
 
-// Thia function sets the background accordingly to the time block
+// This function sets the background accordingly to the time block
 function setBackground() {
   $('.form-control').each(function () {
     var timeBlock = parseInt($(this).attr('id'));
     currentHour = parseInt(currentHour);
+
     if (currentHour > timeBlock) {
       $(this).addClass('past');
     } else if (currentHour < timeBlock) {
