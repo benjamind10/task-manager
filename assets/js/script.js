@@ -59,13 +59,9 @@ function setBackground() {
     var timeBlock = parseInt($(this).attr('id'));
     currentHour = parseInt(currentHour);
 
-    if (currentHour > timeBlock) {
-      $(this).addClass('past');
-    } else if (currentHour < timeBlock) {
-      $(this).addClass('future');
-    } else {
-      $(this).addClass('present');
-    }
+    if (currentHour > timeBlock) $(this).addClass('past');
+    else if (currentHour < timeBlock) $(this).addClass('future');
+    else $(this).addClass('present');
   });
 }
 
